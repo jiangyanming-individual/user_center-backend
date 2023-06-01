@@ -1,0 +1,19 @@
+#放一些特殊的配置比如数据库 、域名等；
+spring:
+  application:
+    name: user_center
+
+  #数据库的配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: jym666..
+    #?serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://8.130.86.153/user_center?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource #使用Druid的数据源；
+
+  #session失效时间：一天；
+  session:
+    timeout: 86400
+
+
